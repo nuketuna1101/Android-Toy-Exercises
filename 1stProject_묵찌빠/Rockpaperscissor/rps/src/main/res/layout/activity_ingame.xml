@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ingame">
+
+    <!-- 플레이어와 상대 텍스트 -->
+    <TextView
+        android:id="@+id/text_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player"
+        android:textColor="@android:color/black"
+        android:textSize="25dp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginHorizontal="60dp"
+        />
+
+    <TextView
+        android:id="@+id/text_opponent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Opponent"
+        android:textColor="@android:color/black"
+        android:textSize="25dp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginHorizontal="60dp"
+        />
+
+    <!-- Player 상태 이미지 -->
+    <ImageView
+        android:id="@+id/player_paper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/paper"
+        android:visibility="invisible"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="130dp"
+        android:layout_marginHorizontal="50dp"
+        />
+
+    <ImageView
+        android:id="@+id/player_rock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/rock"
+        android:visibility="invisible"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="130dp"
+        android:layout_marginHorizontal="50dp"
+        />
+
+    <ImageView
+        android:id="@+id/player_scissor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/scissor"
+        android:visibility="invisible"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="130dp"
+        android:layout_marginHorizontal="50dp"
+        />
+
+    <!-- Opponent 상태 이미지 -->
+    <ImageView
+        android:id="@+id/opponent_paper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/paper"
+        android:visibility="invisible"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="130dp"
+        android:layout_marginHorizontal="50dp"
+        />
+
+    <ImageView
+        android:id="@+id/opponent_rock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/rock"
+        android:visibility="invisible"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="130dp"
+        android:layout_marginHorizontal="50dp"
+        />
+
+    <ImageView
+        android:id="@+id/opponent_scissor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/scissor"
+        android:visibility="invisible"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="130dp"
+        android:layout_marginHorizontal="50dp"
+        />
+
+    <!-- 매치 종료 시 승자 나타내기 -->
+    <TextView
+        android:id="@+id/text_playerwin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Match Result : Player Win!"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="20dp"
+        android:visibility="invisible"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="400dp"
+        android:layout_marginHorizontal="50dp"
+        />
+
+    <TextView
+        android:id="@+id/text_playerlose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Match Result : Player Lose!"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="20dp"
+        android:visibility="invisible"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="400dp"
+        android:layout_marginHorizontal="50dp"
+        />
+
+    <!-- 하단 세 가지 이미지버튼 -->
+    <Button
+        android:id="@+id/imgbutton_rock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rock"
+        android:layout_marginBottom="80dp"
+        android:layout_marginLeft="40dp"
+        android:paddingVertical="25dp"
+        android:textStyle="italic"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <Button
+        android:id="@+id/imgbutton_paper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Paper"
+        android:layout_marginBottom="80dp"
+        android:paddingVertical="25dp"
+        android:textStyle="italic"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/imgbutton_rock"
+        app:layout_constraintRight_toLeftOf="@id/imgbutton_scissor"
+        />
+
+    <Button
+        android:id="@+id/imgbutton_scissor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scissor"
+        android:layout_marginBottom="80dp"
+        android:layout_marginRight="40dp"
+        android:paddingVertical="25dp"
+        android:textStyle="italic"
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <!-- 최하단 라운드와 승률 텍스트 -->
+    <TextView
+        android:id="@+id/text_round"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Round : "
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="40dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/text_win"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wins / Matches : "
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="160dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
